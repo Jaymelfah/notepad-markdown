@@ -21,6 +21,8 @@ export default function Editor() {
         selectedTab={selectedTab}
         onTabChange={setSelectedTab}
         generateMarkdownPreview={(markdown) => Promise.resolve(converter.makeHtml(markdown))}
+        minEditorHeight={90}
+        heightUnits="vh"
       />
     </div>
   );
