@@ -36,3 +36,15 @@
   border: none;
   padding: 0.5rem;
 }
+
+.notes-list {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specific-note {
+  background-color: #dceeb5;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+}

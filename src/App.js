@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Split from 'react-split';
 import Notes from './components/Notes';
 import Editor from './components/Editor';
 
 function App() {
+  const [notes, setNotes] = useState([]);
+
   return (
     <div className="App">
       <Split
@@ -17,7 +19,10 @@ function App() {
         dragInterval={1}
         className="split"
       >
-        <Notes />
+        <Notes
+          notes={notes}
+          setNotes={setNotes}
+        />
         <Editor />
       </Split>
     </div>
