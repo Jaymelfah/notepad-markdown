@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { BsTrash } from 'react-icons/bs';
@@ -17,6 +17,10 @@ const Notes = (props) => {
     const filter = notes.filter((note) => note.id !== id);
     setNotes(filter);
   };
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
 
   return (
 
